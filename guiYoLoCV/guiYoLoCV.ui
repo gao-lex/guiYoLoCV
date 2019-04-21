@@ -38,7 +38,23 @@
      </widget>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0">
+      <item>
+       <widget class="QLabel" name="WarnLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>警告信息</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QLabel" name="infoLabel">
         <property name="sizePolicy">
@@ -50,19 +66,15 @@
         <property name="text">
          <string>检测ing</string>
         </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="startRectPushButton">
-        <property name="text">
-         <string>描绘限制区域</string>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="clearRectPushButton">
+       <widget class="QPushButton" name="overloadAreaPushButton">
         <property name="text">
-         <string>清除限制区域</string>
+         <string>重载限制区域</string>
         </property>
        </widget>
       </item>

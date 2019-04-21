@@ -3,6 +3,19 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_guiYoLoCV.h"
 
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <vector>
+#include <queue>
+#include <fstream>
+#include <thread>
+#include <future>
+#include <atomic>
+#include <mutex>         // std::mutex, std::unique_lock
+#include <cmath>
+
+#include "yolo_v2_class.hpp"
 
 #include <QDebug>
 #include <QGraphicsScene>
@@ -34,9 +47,10 @@ public:
 
 public slots:
 	void updateImage();
+	
 
 protected:
-	void showEvent(QShowEvent *event);
+	//void showEvent(QShowEvent *event);
 	//void paintEvent(QPaintEvent *e);
 private:
 	Ui::guiYoLoCVClass ui;
@@ -45,5 +59,7 @@ private:
 	cv::Mat frame, blob;
 	Net net;
 	cv::VideoCapture vcap;
+	std::vector<Point> vec ;
+
 	const std::string videoStreamAddress = "rtmp://localhost:1935/liveRaw";
 };

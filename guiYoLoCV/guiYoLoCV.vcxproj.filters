@@ -34,6 +34,9 @@
     <Filter Include="gitFiles">
       <UniqueIdentifier>{bbf645d6-1b29-47ae-a7e0-e0f5ead6f857}</UniqueIdentifier>
     </Filter>
+    <Filter Include="configFiles">
+      <UniqueIdentifier>{9664fec6-07bd-4987-a52f-262db0254e33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -74,8 +77,11 @@
     <None Include="yolov3-tiny-me_2000.weights">
       <Filter>yoloFiles</Filter>
     </None>
-    <None Include="..\readme.md">
+    <None Include="..\README.md">
       <Filter>gitFiles</Filter>
+    </None>
+    <None Include="region.cfg">
+      <Filter>configFiles</Filter>
     </None>
   </ItemGroup>
 </Project>

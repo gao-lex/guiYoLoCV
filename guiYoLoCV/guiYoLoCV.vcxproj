@@ -129,8 +129,9 @@
   <ItemGroup>
     <None Include="..\.gitattributes" />
     <None Include="..\.gitignore" />
-    <None Include="..\readme.md" />
+    <None Include="..\README.md" />
     <None Include="obj.names" />
+    <None Include="region.cfg" />
     <None Include="yolov3-tiny-me.cfg" />
     <None Include="yolov3-tiny-me_2000.weights" />
   </ItemGroup>
