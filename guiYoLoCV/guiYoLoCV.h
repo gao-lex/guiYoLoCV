@@ -26,6 +26,8 @@
 #include <QMessageBox>
 #include <QTimer>
 
+#include <QTime>
+
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -51,9 +53,14 @@ public slots:
 
 protected:
 	void draw_boxes(cv::Mat mat_img, std::vector<bbox_t> result_vec, std::vector<std::string> obj_names,
-		int current_det_fps = -1, int current_cap_fps = -1);
+		int current_det_fps, int current_cap_fps);
 	//void showEvent(QShowEvent *event);
 	//void paintEvent(QPaintEvent *e);
+
+
+private slots:
+	void on_overloadAreaPushButton_pressed();
+
 private:
 	Ui::guiYoLoCVClass ui;
 	QTimer theTimer;
@@ -67,6 +74,7 @@ private:
 
 	//gpu
 
+	QTime time;
 	cv::VideoCapture cap;
 	cv::Mat cur_frame;
 	cv::Size  frame_size;
