@@ -50,6 +50,8 @@ public slots:
 	
 
 protected:
+	void draw_boxes(cv::Mat mat_img, std::vector<bbox_t> result_vec, std::vector<std::string> obj_names,
+		int current_det_fps = -1, int current_cap_fps = -1);
 	//void showEvent(QShowEvent *event);
 	//void paintEvent(QPaintEvent *e);
 private:
@@ -57,9 +59,27 @@ private:
 	QTimer theTimer;
 	QPixmap pixmap;
 	cv::Mat frame, blob;
-	Net net;
+	//Net net;
 	cv::VideoCapture vcap;
 	std::vector<Point> vec ;
 
-	const std::string videoStreamAddress = "rtmp://localhost:1935/liveRaw";
+	//const std::string videoStreamAddress = "rtmp://localhost:1935/liveRaw";
+
+	//gpu
+
+	cv::VideoCapture cap;
+	cv::Mat cur_frame;
+	cv::Size  frame_size;
+
+	std::string  names_file = "obj.names";
+	std::string  cfg_file = "yolov3-tiny-me.cfg";
+	std::string  weights_file = "yolov3-tiny-me_2000.weights";
+	std::string filename = "rtmp://127.0.0.1:1935/liveRaw";
+	float const thresh = 0.2;
+
+	bool const save_output_videofile = false;
+	bool const send_network = false;
+	bool const use_kalman_filter = false;
+
+	bool detection_sync = true;
 };

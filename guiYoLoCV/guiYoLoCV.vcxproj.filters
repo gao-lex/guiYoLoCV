@@ -84,4 +84,12 @@
       <Filter>configFiles</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="yolo_v2_class.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="yolo_cpp_dll.lib" />
+  </ItemGroup>
 </Project>

@@ -259,3 +259,9 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/guiYoLoCV/3rdparty
+/guiYoLoCV/yolo_cpp_dll.lib
+/guiYoLoCV/yolo_cpp_dll.ipdb
+/guiYoLoCV/yolo_cpp_dll.iobj
+/guiYoLoCV/yolo_cpp_dll.exp
+/guiYoLoCV/pthreadVC2.dll
